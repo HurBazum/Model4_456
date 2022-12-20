@@ -17,13 +17,14 @@ namespace tuples
 				User[j].name = Console.ReadLine();
 				Console.Write("Введите фамилию: ");
 				User[j].surname = Console.ReadLine();
-				Console.Write("Введите логин: ");
+                Console.Write("Введите возраст: ");
+                User[j].age = byte.Parse(Console.ReadLine());
+                Console.Write("Введите логин: ");
 				User[j].login = Console.ReadLine();
 				User[j].loginLength = (byte)User[j].login.Length;
 				Console.WriteLine("Есть ли у Вас животные? Да или Нет");
 				User[j].havingPet = (string.Compare(Console.ReadLine(), "Да", true) == 0) ? true : false;
-				Console.Write("Введите возраст: ");
-				User[j].age = byte.Parse(Console.ReadLine());
+
 				User[j].favColors = new string[3];
 				Console.WriteLine("Введите три Ваших любимых цвета(по английски с большой буквы):");
 				for (int i = 0; i < User[j].favColors.Length; i++)
